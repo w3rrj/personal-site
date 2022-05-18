@@ -1,0 +1,472 @@
+
+*{
+    
+    box-sizing:borderbox;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+body{
+margin:0px;
+
+}
+.dotted-hr{
+    border: dotted 6px white;
+    border-bottom: none;
+    margin:20px auto;
+    width: 70px;
+}
+h1{
+    font-size: 2.5rem;
+    text-align:center;
+}
+h2{
+
+    font-size:1.5rem;
+    text-align:center;
+}
+p{
+
+    font-size: 1.2rem;
+    text-align:justify;
+
+}
+a{
+
+    color:#fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+/* Navbar starts from here*/
+
+[class*="col-"]{
+    float:left;
+    padding: 10px;
+}
+
+/* for mobile */
+[class*="col-"]{
+    width:100%;
+}
+.navbar{
+    background-color:#1499a5;
+    text-align: center;
+    padding: 1% 7%;
+}
+.navbar h1{
+    color: #fff;
+    margin: 0;
+    padding-top: 10px;
+}
+
+
+.about{
+    background-color:#0c6168;
+}
+
+.navbar-menu{
+
+    display:flex;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+
+.navbar-menu a{
+ background-color: #0c6168;
+ border-radius: 10px;
+ margin: 7px 0px;
+ padding: 10px;
+ box-sizing:border-box;
+}
+.navbar-menu a:hover{
+background-color: gray;
+}
+
+
+.navbar::after{
+    content: '';
+    display: table;
+    clear: both;
+
+}
+/*!--nav bar end*/
+
+ /* profile start */
+.profile{
+    padding: 130px;
+    position:relative;
+    text-align: center;
+}
+ .profile .top-weather-icon{
+    position:absolute;
+    right: 60px;
+    top:30px;
+    transition:5s;
+}
+
+ .profile .top-weather-icon:hover{
+   transform:rotate(360deg);
+ }
+
+ .profile-dese h1{
+font-family: 'Satisfy', cursive; 
+font-size: 3rem;
+
+ }
+
+ .profile-dese p{
+    color:gray;
+    margin:0 auto 20px auto;
+    text-align: center;
+    width:90%;
+ }
+    
+
+ .profile .bottom-weather-icon{
+    position:absolute;
+    left: 60px;
+    bottom: 10px; 
+    transition:2s;
+}
+
+.profile .bottom-weather-icon:hover{
+
+    transform:rotate(360deg);
+
+}
+
+ 
+ /* profile end */
+
+
+ /* about start */
+ .about-me{
+
+    background-color: #1499a5;
+    padding: 1% 7%;
+    color:#fff;
+    text-align: center;
+    font-family:  'Montserrat', sans-serif;
+ }
+ .about-me::after{
+     clear: both;
+     display:table;
+     content:'';
+ }
+
+ .about-img img{
+border:5px solid white;
+border-radius: 50%;
+height:220px;
+width: 180px;
+ }
+ .about-me p{
+    text-align:center;
+ }
+  .c-v-button{
+    background-color:#052d2f;
+    color:#fff;
+     border: none;
+     border-radius: 12px;
+     padding: 15px;
+     font-size: 1rem;
+     text-align:center;
+     margin: 10px; 
+  }
+ 
+ /* about end */
+
+
+ /* professional-exprience star */
+ .professional-exprience{
+    padding: 1% 0%;
+ }
+
+.card{
+background-color: #a39e9e;
+border-radius: 5px;
+padding: 10px;
+transition:0.3s;
+height: 700px;
+
+}
+
+.card:hover{
+
+box-shadow: 0 4px 8px 5px black;
+
+}
+.card-icon{
+    text-align:center;
+
+}
+.card-icon img{
+    margin-top:20px;
+
+}
+.rounded-img{
+    border: 5px solid white;
+    border-radius: 50%;
+    padding: 15px;
+}
+
+.card-title h2{
+background-color: #616161;
+color:#fff;
+padding: 10px;
+text-align:center;
+
+}
+.skills-conta{
+    padding-right: 45px;
+}
+
+.skills-conta li{
+    list-style: none;
+    font-weight: bolder;
+    margin: 30px 10px;
+    position:relative;
+    text-transform: uppercase;
+
+}
+
+
+
+.skills-conta li::before{
+    content:'';
+    position:absolute;
+    top: calc(100% + 5px);
+    width:100%;
+    height:10px;
+    left:0;
+    background-color: rgb(86,86,153,.5);
+    border-radius: 1000px;;
+ }
+
+
+ .skills-conta li::after{
+    content:'';
+    position:absolute;
+    top: calc(100% + 5px);
+    width:0%;
+    height:10px;
+    left:0;
+    background-color: rgb(86,86,153,1);
+    border-radius: 1000px;
+     animation-duration: 3s;
+     animation-delay: 2s;
+     animation-timing-function: linear;
+     animation-fill-mode: forwards;
+     animation-iteration-count: 3;
+ }
+
+ 
+ .skills-conta li.html::after{
+    animation-name:html;
+
+}
+@keyframes html{
+   to{
+       width: 90%;
+   }
+   
+}
+
+ .skills-conta li.css::after{
+    animation-name: css;
+
+}
+@keyframes css{
+   to{
+       width: 80%;
+   }
+   
+}
+
+
+.skills-conta li.bootstrap::after{
+    animation-name:bootstrap;
+
+}
+@keyframes bootstrap{
+   to{
+       width: 70%;
+   }
+   
+}
+
+
+.skills-conta li.js::after{
+    animation-name: html;
+
+}
+@keyframes js{
+   to{
+       width: 60%;
+   }
+   
+}
+
+
+
+
+.skills-conta li.jquery::after{
+    animation-name: jquery;
+
+}
+@keyframes jquery {
+   to{
+       width: 50%;
+   }
+   
+}
+
+
+.skills-conta li.node::after{
+    animation-name: jquery;
+
+}
+@keyframes node {
+   to{
+       width: 40%;
+   }
+   
+}
+
+
+
+
+.skills-conta li.express::after{
+    animation-name: express;
+
+}
+@keyframes express {
+   to{
+       width: 40%;
+   }
+   
+}
+
+
+
+.skills-conta li.git::after{
+    animation-name:git;
+
+}
+@keyframes git{
+   to{
+       width: 30%;
+   }
+   
+}
+
+
+.skills-conta li.react::after{
+    animation-name: react;
+
+}
+@keyframes react {
+   to{
+       width: 20%;
+   }
+   
+}
+
+.professional-exprience::after{
+    clear:both;
+    display: table;
+    content:'';
+    
+ }
+  /* professional-exprience end */
+  /* achievement-contact start */
+ .achievement-contact{
+    padding: 1% 7%;
+    background-color: #39a4ac;
+    color:#fff;
+
+ }
+
+ .contract{
+
+    text-align: center;
+ }
+ .contract input, textarea{
+    width:100%;
+     padding: 10px;
+     font-size: 1rem;
+     border: none;
+     border-radius: 5px;
+
+ }
+ .contract button{
+    border: none;
+    border-radius:12px;
+    background-color:#052d2f;
+    color:#ffff;
+    padding:15px;
+    margin:10px;
+    width: 100px;
+ }
+
+ .contract-links{
+    text-align:center;
+ }
+
+ .media-button{
+    padding-top:50px;
+    
+     }
+ .media-button.btn{
+border: none;
+border-radius: 25px;
+ cursor: pointer;
+ font-size:10px;
+ padding:5px;
+ width: 50px;
+
+ }
+ .btn:hover{
+    background-color: gray;
+ }
+ .btn{
+    width:50px;
+    height:50px;
+   
+ }
+
+ .achievement-contact::after{
+    clear: both;
+    display: table;
+    content:'';
+ }
+
+  /* achievement-contact end */
+  /* footer start */
+ .footer{
+background-color: black;
+color:#fff;
+padding: 20px;
+font-size:0.8rem;
+text-align: center;
+ }
+ .footer-menu a{
+ display: block;
+ margin: 15px 0;
+ font-size: 1rem;
+
+ }
+
+ .footer-menu a:hover{
+   color: gray; 
+    }
+
+.footer::after{
+    display: table;
+    content:'';
+    clear: both;
+}
+
+  /* footer end */
